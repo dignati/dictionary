@@ -1,4 +1,4 @@
-(defproject dignati/dictionary "0.1.0"
+(defproject dignati/dictionary "0.2.0-SNAPSHOT"
   :description "Simple dictionary matching"
   :url "https://github.com/dignati/dictionary"
   :license {:name "Eclipse Public License"
