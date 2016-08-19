@@ -48,3 +48,12 @@
   (prop/for-all [ops op-gen]
     (equivalent? (simulate ops)
                  (run ops))))
+
+(defspec perfect-match-with-threshold
+  (prop/for-all [ops op-gen]
+    (let [dict (run ops)]
+      (every?
+        (fn [[_ path id]]
+          (= (all-matches dict path levenshtein 0.5)
+             (all-matches dict path)))
+        ops))))
